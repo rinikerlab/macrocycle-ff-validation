@@ -1,0 +1,12 @@
+5;46,47,48;
+9';31;
+9'';32;
+11;43,44,45;
+16;35;
+19;34; # swapped with respect to the SI, consistent with Lorlatinib_CDCl3_edata.nmredata.sdf
+20;33; # swapped with respect to the SI, consistent with Lorlatinib_CDCl3_edata.nmredata.sdf
+21;36;
+23;40,41,42;
+27;38,39;
+29;37;
+31;30;

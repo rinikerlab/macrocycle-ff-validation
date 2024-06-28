@@ -1,0 +1,30 @@
+; CL3_GMX.top created by acpype (v: 2022.6.6) on Fri Apr 28 18:58:11 2023
+
+[ moleculetype ]
+;name            nrexcl
+ CL3        3
+
+[ atoms ]
+;   nr  type  resi  res  atom  cgnr     charge      mass       ; qtot   bond_type
+     1   HZ     1   CL3    H1    1     0.265900      1.00800 ; qtot 0.266
+     2   CZ     1   CL3    C1    2    -0.384700     12.01000 ; qtot -0.119
+     3   CL     1   CL3   CL1    3     0.039600     35.45000 ; qtot -0.079
+     4   CL     1   CL3   CL2    4     0.039600     35.45000 ; qtot -0.040
+     5   CL     1   CL3   CL3    5     0.039600     35.45000 ; qtot 0.000
+
+[ bonds ]
+;   ai     aj funct   r             k
+     1      2   1    1.1000e-01    2.8451e+05 ;     H1 - C1    
+     2      3   1    1.7580e-01    1.9447e+05 ;     C1 - CL1   
+     2      4   1    1.7580e-01    1.9447e+05 ;     C1 - CL2   
+     2      5   1    1.7580e-01    1.9447e+05 ;     C1 - CL3   
+
+[ angles ]
+;   ai     aj     ak    funct   theta         cth
+     1      2      3      1    1.0768e+02    3.1882e+02 ;     H1 - C1     - CL1   
+     1      2      4      1    1.0768e+02    3.1882e+02 ;     H1 - C1     - CL2   
+     1      2      5      1    1.0768e+02    3.1882e+02 ;     H1 - C1     - CL3   
+     3      2      4      1    1.1130e+02    6.5019e+02 ;    CL1 - C1     - CL2   
+     3      2      5      1    1.1130e+02    6.5019e+02 ;    CL1 - C1     - CL3   
+     4      2      5      1    1.1130e+02    6.5019e+02 ;    CL2 - C1     - CL3   
+

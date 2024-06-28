@@ -1,0 +1,27 @@
+Ala1 HN;38;
+Ala1 HA;39;
+Ala1 HB*;40,41,42;
+Nleu2 HAa;43;
+Nleu2 HAb;44; # Ab 44 Bb 60
+Nleu2 HBa;60;
+Nleu2 HBb;59;
+Nleu2 HG;61;
+Nleu2 HDa*;65,66,67;
+Nleu2 HDb*;62,63,64;
+Nleu2 HD*;62,63,64,65,66,67;
+Phe3 HN;45;
+Phe3 HA;46;
+Phe3 HBa;47,48;# could not be assigned
+Phe3 HBb;47,48;
+Phe3 HB*;47,48;
+Phe3 HD*;49,52;
+Phe3 HE*;50,53;
+Tether4 HN;54;
+Tether4 HA;55;
+Tether4 HBa;33;
+Tether4 HBb;32;
+Tether4 HGa;34,35;# could not be assigned
+Tether4 HGb;34,35;# could not be assigned
+Tether4 HDa;36,37;# could not be assigned
+Tether4 HDb;36,37;# could not be assigned
+Tether4 HE*;56,57,58;

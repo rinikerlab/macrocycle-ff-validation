@@ -1,0 +1,39 @@
+;   XFF Version: XFF3.0.1.8-resp-vdw-0.1-rules.xffprm
+;   Command line:
+	
+
+[ moleculetype ]
+; Name            nrexcl
+CL3		3
+
+[ atoms ]
+;   nr       type  resnr residue  atom   cgnr    charge       mass  typeB    chargeB      massB
+; residue    1 lig rtp lig q 0.0
+    1      c_00_CL3  1     CL3     C_00     1      0.07569515    12.01100000
+    2      cl01_CL3  1     CL3     Cl01     2     -0.10223102    35.45300000
+    3      cl02_CL3  1     CL3     Cl02     3     -0.10223102    35.45300000
+    4      cl03_CL3  1     CL3     Cl03     4     -0.10223102    35.45300000
+    5      h_04_CL3  1     CL3     H_04     5      0.23099790     1.00800000
+
+[ bonds ]
+;    ai     aj funct         c0         c1         c2         c3
+       1       2    1   0.179773  101953.475236
+       1       3    1   0.179773  101953.475236
+       1       4    1   0.179773  101953.475236
+       1       5    1   0.109646  269150.117836
+
+[ pairs ]
+;    ai     aj funct         c0         c1         c2         c3
+
+[ angles ]
+;    ai     aj     ak funct         c0         c1         c2         c3
+      2       1       3    1        110.6170757     492.2591613
+      2       1       4    1        110.6170757     492.2591613
+      2       1       5    1        103.9430927     315.2893610
+      3       1       4    1        110.6170757     492.2591613
+      3       1       5    1        103.9430927     315.2893610
+      4       1       5    1        103.9430927     315.2893610
+
+[ dihedrals ]
+;    ai     aj     ak     al funct         c0         c1         c2         c3         c4         c5
+

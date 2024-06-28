@@ -1,0 +1,38 @@
+
+title                   = NPT sampling 
+; Run parameters
+integrator              = md          ; leap-frog integrator
+nsteps                  = __NSTEPS__
+dt                      = 0.002       ; 2 fs
+; Output control
+nstxout                 = 500000     ; save uncompressed coordinates (with water) every 1 ns
+nstxout-compressed      = 500       ; save compressed coordinates every 1.0 ps
+nstenergy               = 500       ; save energies every 1.0 ps
+nstlog                  = 500       ; update log file every 1.0 ps
+compressed-x-grps       = __SOLUTE__
+; Bond parameters
+continuation            = yes       ; Restarting after NVT 
+constraint_algorithm    = lincs     ; holonomic constraints 
+constraints             = h-bonds   ; bonds involving H are constrained
+rcoulomb                = 1.0       ; short-range electrostatic cutoff (in nm)
+rvdw                    = 1.0       ; short-range van der Waals cutoff (in nm)
+DispCorr                = EnerPres  ; account for cut-off vdW scheme
+; Electrostatics
+coulombtype             = PME       ; Particle Mesh Ewald for long-range electrostatics
+; Temperature coupling is on
+tcoupl                  = V-rescale             ; modified Berendsen thermostat
+tc-grps                 = __SOLUTE__ __SOLVENT__       ; two coupling groups - more accurate
+tau_t                   = 0.1     0.1           ; time constant, in ps
+ref_t                   = 300     300           ; reference temperature, one for each group, in K
+; Pressure coupling is on
+pcoupl                  = c-rescale     ; Pressure coupling on in NPT
+pcoupltype              = isotropic             ; uniform scaling of box vectors
+tau_p                   = 2.0                   ; time constant, in ps
+ref_p                   = 1.0                   ; reference pressure, in bar
+compressibility         = __COMPRESSIBILITY__                ; isothermal compressibility of water, bar^-1
+refcoord_scaling        = com
+; Periodic boundary conditions
+pbc                     = xyz       ; 3-D PBC
+; Velocity generation
+gen_vel                 = no        ; Velocity generation is off 
+

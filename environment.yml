@@ -1,0 +1,19 @@
+name: macrocycle-ff-benchmark
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - mdtraj
+  - ipywidgets<8
+  - nglview
+  - rdkit
+  - matplotlib
+  - pandas
+  - py3Dmol
+  - notebook
+  - networkx
+  - ambertools
+variables:
+  VAR1: valueA
+  VAR2: valueB

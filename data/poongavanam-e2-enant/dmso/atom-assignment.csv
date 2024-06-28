@@ -1,0 +1,29 @@
+4;60;# in DMSO
+5;62;
+6;37;
+7';38;
+7'';39;
+7;38;# in DMSO
+8';40;
+8'';41;
+8;40,41;# not assignable from the data, in DMSO
+9;42;
+10';44;
+10'';43;
+10;44;# not quite clear, in DMSO
+11';46;
+11'';45;
+11;45,46;# not assignable from the data, in DMSO
+14;50;
+15;54;
+16;56;# in DMSO
+16';56;
+16'';55;
+19;34,35,36;#special
+20;47,48,49;#special
+21;51,52,53;#special
+22;66,67,68;#special
+23;57,58,59;#special
+24;65;
+25;64;
+26;63;
