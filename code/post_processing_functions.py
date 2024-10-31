@@ -272,3 +272,18 @@ def noe_avg(a, exponent=-6, axis=None):
     return np.mean(a**exponent, axis=axis)**(1/exponent)
 
 assert noe_avg([1, 2]) == np.mean([1, 2**(-6)])**(-1/6), noe_avg([1, 2])
+
+# Center a trajectory in the periodic box
+
+def center_traj(traj, origin=True):
+    boxdim = traj.unitcell_lengths[:, np.newaxis, :]
+    center_angle = circular_mean_angle(traj.xyz, boxdim, axis=1)
+    center = center_angle * traj.unitcell_lengths / (2*np.pi)
+    traj.xyz = (traj.xyz - center[:, np.newaxis, :] + boxdim / 2) % boxdim
+    if origin:
+        traj.xyz -= boxdim / 2
+
+
+def circular_mean_angle(arr, periodicity, axis=None):
+    on_circle = np.exp(2j*np.pi*arr / periodicity)
+    return np.angle(np.sum(on_circle, axis=axis))

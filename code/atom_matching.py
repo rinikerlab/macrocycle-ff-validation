@@ -4,13 +4,15 @@ import numpy as np
 import networkx
 
 
-def match_atoms(mol_1, mol_2, conf_1=0, conf_2=0):
+def match_atoms(mol_1, mol_2, conf_1=0, conf_2=0, match_by="label"):
     """Align atom order based on the rdkit canonical rank and prochiral centers.
 
-    When two substituents on a 4-bonded atom have the same canonical rank, uses
-    a geometrical criterion to distinguish them. This way, prochiral atoms can
-    be distinguished.
-    This will not work with other sources of prochirality.
+    * When two substituents on a 4-bonded atom have the same canonical rank,
+      uses a geometrical criterion to distinguish them. This way, prochiral
+      atoms can be distinguished.
+    * This will not work with other sources of prochirality.
+    * "match_by" should be "label" (using the CanonicalRankAtoms function) or
+      "atom" (using just connectivity and elements)
 
     Returns
     -------
@@ -41,7 +43,7 @@ def match_atoms(mol_1, mol_2, conf_1=0, conf_2=0):
     graph_2 = mol_to_graph(mol_2)
     add_tetrahedral_tiebreakers(mol_1, graph_1, conformer=conf_1)
     add_tetrahedral_tiebreakers(mol_2, graph_2, conformer=conf_2)
-    iso = networkx.vf2pp_isomorphism(graph_1, graph_2, node_label="label")
+    iso = networkx.vf2pp_isomorphism(graph_1, graph_2, node_label=match_by)
     if iso is None:
         raise ValueError("Graph isomerism between molecules failed. Are the bonds equivalent?")
     return np.array([iso[i] for i in range(n_atoms)])
