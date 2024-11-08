@@ -1,4 +1,4 @@
-This repository contains code and data to reproduce the figures in the paper "Validating Small-Molecule Force Fields for Macrocyclic Compounds Using NMR Data in Different Solvents"
+This repository contains code and data to reproduce the figures in the paper "Validating Small-Molecule Force Fields for Macrocyclic Compounds Using NMR Data in Different Solvents" (J. Chem. Inf. Model. 2024, 64, 20, 7938–7948, https://doi.org/10.1021/acs.jcim.4c01120).
 
 # Data in this repository
 In the paper, we ran REST2 simulations of 11 compounds, 4 force fields, partially in several solvents, and partially with 2 different settings. The nomenclature is as follows:
