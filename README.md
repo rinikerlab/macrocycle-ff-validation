@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14054763.svg)](https://doi.org/10.5281/zenodo.14054763)
+
 This repository contains code and data to reproduce the figures in the paper "Validating Small-Molecule Force Fields for Macrocyclic Compounds Using NMR Data in Different Solvents" (J. Chem. Inf. Model. 2024, 64, 20, 7938–7948, https://doi.org/10.1021/acs.jcim.4c01120).
 
 # Data in this repository
